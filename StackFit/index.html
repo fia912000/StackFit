@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StackFit</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .category { border-bottom: 1px solid #ccc; margin-bottom: 1rem; }
+    .category-header {
+      display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; padding: 1rem; background-color: #f7f7f7;
+    }
+    .category-header h2 { margin: 0; color: #9C4545; }
+    .toggle-icon { font-size: 1.2rem; transition: transform 0.3s ease; }
+    .toggle-icon.rotate { transform: rotate(90deg); }
+    .category-content {
+      max-height: 0; overflow: hidden; transition: max-height 0.5s ease;
+      padding: 0 1rem;
+    }
+    .category-content.open { max-height: 2000px; padding-bottom: 1rem; }
+    .product-list {
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .product-card {
+      padding: 1rem; background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 5px;
+    }
+    .product-card h3 { margin-top: 0; font-size: 1.1rem; }
+    .product-card a {
+      display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem;
+      background-color: #9C4545; color: white; text-decoration: none;
+      border-radius: 4px; font-weight: bold;
+    }
+    .product-card a:hover { background-color: #7f3939; }
+
+    .carousel {
+      position: relative; width: 100%; overflow: hidden; background: #eee; margin: 1rem 0;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .carousel-track {
+      display: flex; transition: transform 0.5s ease-in-out; width: 100%;
+    }
+    .carousel-slide {
+      min-width: 100%; flex-shrink: 0; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; padding: 2rem 1rem; min-height: 200px;
+    }
+    .carousel-slide h3 {
+      font-size: 1.5rem; margin-bottom: 1rem; text-align: center;
+    }
+    .carousel-slide a {
+      display: inline-block; padding: 0.5rem 1rem; background-color: #9C4545;
+      color: white; text-decoration: none; border-radius: 4px; font-weight: bold;
+    }
+    .carousel-buttons {
+      position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between;
+      transform: translateY(-50%); pointer-events: none;
+    }
+    .carousel-button {
+      background: rgba(0, 0, 0, 0.3); color: white; border: none;
+      font-size: 1.5rem; pointer-events: auto; cursor: pointer;
+    }
+    .carousel-dots {
+      text-align: center; margin-top: 1rem;
+    }
+    .carousel-dot {
+      display: inline-block; width: 10px; height: 10px;
+      margin: 0 5px; background: #ccc; border-radius: 50%; cursor: pointer;
+    }
+    .carousel-dot.active { background: #000; }
+  </style>
+</head>
+
+
+
+<body>
+  <header>
+    <h1>StackFit</h1>
+    <p>Your goal-based fitness product guide</p>
+  </header>
+
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide">
+        <h3>🔥 Top Creatine Deals This Week</h3>
+        <a href="#">Take Me There</a>
+      </div>
+      <div class="carousel-slide">
+        <h3>🏋️ Must-Have Home Gym Equipment</h3>
+        <a href="#">Take Me There</a>
+      </div>
+      <div class="carousel-slide">
+        <h3>💪 Protein Stacks Under $50</h3>
+        <a href="#">Take Me There</a>
+      </div>
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <div class="carousel-dots">
+      <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+      <span class="carousel-dot" onclick="goToSlide(1)"></span>
+      <span class="carousel-dot" onclick="goToSlide(2)"></span>
+    </div>
+  </div>
+
+  <main>
+    <section class="category">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>Equipment</h2>
+        <span class="toggle-icon">▶</span>
+      </div>
+      <div class="category-content">
+        <div class="product-list">
+          <div class="product-card"><h3>Dumbbells</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Resistance Bands</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Flat Benches</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Weight Racks</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Plates</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Treadmills</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Exercise Bikes</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Cable Machines</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Smith Machines</h3><a href="#">Explore Options</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>Supplements</h2>
+        <span class="toggle-icon">▶</span>
+      </div>
+      <div class="category-content">
+        <div class="product-list">
+          <div class="product-card"><h3>Protein Powders</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Creatine</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Pre-Workout</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Multivitamins</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Fat Burners</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>BCAA Supplements</h3><a href="#">Explore Options</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>Supportive Accessories</h2>
+        <span class="toggle-icon">▶</span>
+      </div>
+      <div class="category-content">
+        <div class="product-list">
+          <div class="product-card"><h3>Lifting Gloves</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Wrist Straps</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Weightlifting Belts</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Knee Sleeves</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Elbow Wraps</h3><a href="#">Explore Options</a></div>
+          <div class="product-card"><h3>Grip Pads</h3><a href="#">Explore Options</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="category-header" onclick="toggleCategory(this)">
+        <h2>Clothes</h2>
+        <span class="toggle-icon">▶</span>
+      </div>
+      <div class="category-content">
+        <div class="product-list">
+          <div class="product-card"><h3>Nike</h3><a href="#">Shop Nike</a></div>
+          <div class="product-card"><h3>Adidas</h3><a href="#">Shop Adidas</a></div>
+          <div class="product-card"><h3>Reebok</h3><a href="#">Shop Reebok</a></div>
+          <div class="product-card"><h3>Under Armour</h3><a href="#">Shop Under Armour</a></div>
+          <div class="product-card"><h3>Lululemon</h3><a href="#">Shop Lululemon</a></div>
+          <div class="product-card"><h3>ON Running</h3><a href="#">Shop ON</a></div>
+          <div class="product-card"><h3>Hoka One One</h3><a href="#">Shop Hoka</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Back to Top Button -->
+<button id="backToTop" onclick="scrollToTop()">Top</button>
+
+  <footer>
+    <p>&copy; 2025 StackFit. All rights reserved.</p>
+  </footer>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
