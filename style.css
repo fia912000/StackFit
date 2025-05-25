@@ -1,300 +1,328 @@
 /* Base Styles */
 
 body {
-    font-family: 'Inter', sans-serif;
-  }
-  h1, h2, h3, .category-header h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-  }
-  
-  header {
-    background-color: #9C4545;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  header p {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    font-weight: 500;
-    color: #f4f4f4;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  main {
-    padding: 1rem;
-  }
-  
-  .category {
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 1rem;
-  }
-  
-  .category h2 {
-    color: #9C4545;
-    margin-bottom: 0.5rem;
-  }
-  
-  .product-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .product-card {
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .product-card h3 {
-    margin-top: 0;
-    font-size: 1.1rem;
-  }
-  
-  .product-card a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #9C4545;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-  
-  .product-card a:hover {
-    background-color: #7f3939;
-  }
-  
-  footer {
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: #777;
-    border-top: 1px solid #ccc;
-  }
-  
-  /* Back to Top Button */
-  #backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    background: #9C4545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-    z-index: 999;
-  }
-  
-  /* Animated Dropdown Panel (no height limit) */
-  .category-content {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.4s ease;
-    padding: 0 1rem;
-  }
-  
-  .category-content.open {
-    padding-bottom: 1rem;
-  }
-  /* Carousel Styles */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background-color: #121212;
+  color: #F1F1F1;
+}
 
-  .carousel {
-    position: relative;
-    width: 100vw; /* changed from 100% */
-    max-width: 100%;
-    overflow: hidden;
-    background: #eee;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-  }
-  
+h1, h2, h3, .category-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+header {
+  background: linear-gradient(to bottom, #04B11E, #49E060);
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+.category {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+  background-color: #303030;
+  border-radius: 5px;
+}
+
+.category h2 {
+  color: #BFFF00;
+  margin-bottom: 0.5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-card {
+  padding: 1rem;
+  background-color: #303030;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #BFFF00;
+  color: #121212;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.product-card a:hover {
+  background-color: #A5E600;
+}
+
+footer {
+  background-color: #1C1C1C;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #A0A0A0;
+  border-top: 1px solid #333;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #00B86B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+/* Category Dropdown */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #1E1E1E;
+  border-left: 5px solid #00B86B;
+}
+
+.category-header h2 {
+  margin: 0;
+  color: #BFFF00;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  color: #BFFF00;
+}
+
+.toggle-icon.rotate {
+  transform: rotate(90deg);
+}
+
+.category-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+  padding: 0 1rem;
+}
+
+.category-content.open {
+  padding-bottom: 1rem;
+}
+
+.category-content .product-list {
+  margin-top: 1rem;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: #1C1C1C;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 250px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  color: #F1F1F1;
+}
+
+.carousel-slide h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  word-break: break-word;
+  max-width: 90%;
+}
+
+.carousel-slide a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #BFFF00;
+  color: #121212;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.carousel-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #666;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background: #BFFF00;
+}
+
+/* Home Gym Slide */
+.home-gym-slide {
+  width: 100%;
+  height: 250px;
+  background: url('greg-rosenke-8DcwvlVXIVw-unsplash.jpg') center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-gym-slide .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.home-gym-slide h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  word-break: break-word;
+  max-width: 90%;
+}
+
+.home-gym-slide a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #BFFF00;
+  color: #121212;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.home-gym-slide a:hover {
+  background-color: #A5E600;
+}
+
+@media (max-width: 600px) {
   .carousel-track {
     display: flex;
-    width: 300vw; /* 100vw per slide x 3 slides */
-    transition: transform 0.5s ease-in-out;
+    flex-direction: row;
+    width: 300%;
   }
-  
-  .carousel-slide {
-    width: 100vw;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-    min-height: 200px;
-    box-sizing: border-box;
-  }
-  
-  .carousel-slide h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .carousel-slide a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #9C4545;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-  
-  .carousel-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  
-  .carousel-button {
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    pointer-events: auto;
-    cursor: pointer;
-  }
-  
-  .carousel-dots {
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
-  .carousel-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .carousel-dot.active {
-    background: #000;
-  }
-  /* Category Dropdown Header Styles */
-.category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 1rem;
-    background-color: #f7f7f7;
-  }
-  
-  .category-header h2 {
-    margin: 0;
-    color: #9C4545;
-  }
-  
-  .toggle-icon {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .toggle-icon.rotate {
-    transform: rotate(90deg);
-  }
-  /* --- StackFit Polishing Bundle --- */
 
-/* 1. Product Card Hover Effects */
-.product-card:hover {
-    border-color: #9C4545;
-    box-shadow: 0 0 8px rgba(156, 69, 69, 0.2);
-    transition: all 0.3s ease;
+  .carousel-slide,
+  .home-gym-slide {
+    width: 100vw;
+    height: auto;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+    text-align: center;
   }
-  
-  /* 2. Category Header Accent Bar */
-  .category-header {
-    border-left: 5px solid #9C4545;
-  }
-  
-  /* 3. Softened Border Color */
-  .product-card {
-    border-color: #bca4a4;
-  }
-  
-  /* 4. Card Headline Typography */
-  .product-card h3 {
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+
+  .carousel-slide h3,
+  .home-gym-slide h3 {
     font-size: 1rem;
-    color: #333;
+    padding: 0;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 90%;
+    margin: 0 auto 1rem auto;
   }
-  
-  /* 5. Alternating Category Backgrounds */
-  .category:nth-of-type(even) {
-    background-color: #fdf9f9;
+
+  .carousel-slide a,
+  .home-gym-slide a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
-  
-  /* 6. Smooth Transition for Category Expand (if not already set) */
-  .category-content {
-    transition: height 0.4s ease;
+
+  .carousel-buttons {
+    font-size: 1.2rem;
   }
-  /* Spacing between dropdown header and first card */
-.category-content .product-list {
-    margin-top: 1rem;
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
   }
-  
-  @media (max-width: 600px) {
-    .carousel-slide h3 {
-        font-size: 1.1rem;
-        text-align: center;
-        padding: 0 1rem;
-        line-height: 1.4;
-        white-space: normal;
-        word-break: break-word;
-      }
-  
-    .carousel-slide a {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-    }
-  
-    .carousel {
-      margin: 0.5rem 0;
-    }
-  
-    .carousel-buttons {
-      font-size: 1.2rem;
-    }
-  
-    .carousel-dot {
-      width: 8px;
-      height: 8px;
-    }
-  }
-  
+}
