@@ -243,25 +243,29 @@ footer {
 }
 
 /* Home Gym Slide */
+
 .home-gym-slide {
   width: 100%;
   height: 250px;
-  background: url('greg-rosenke-8DcwvlVXIVw-unsplash.jpg') center center / cover no-repeat;
+  background: url('Images/greg-rosenke-8DcwvlVXIVw-unsplash.jpg') center center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  text-align: center;
 }
 
 .home-gym-slide .overlay {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   width: 100%;
+  max-width: 100%;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-gym-slide h3 {
@@ -331,4 +335,137 @@ footer {
 .logo {
   height: 50px;
   margin-bottom: 0.5rem;
+}
+
+/* Supplement Slide */
+
+.supplement-slide {
+  width: 100%;
+  height: 250px;
+  background: url('Images/supplement-slide.png') center center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.supplement-slide .overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.supplement-slide h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  max-width: 90%;
+  word-break: break-word;
+}
+
+.supplement-slide a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #BFFF00;
+  color: #121212;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.supplement-slide a:hover {
+  background-color: #A5E600;
+}
+
+/* Product Cards */
+.card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.supplement-card {
+  background-color: #303030;
+  border-left: 5px solid #04B11E;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BFFF00;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.product-card.horizontal-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #303030;
+  border: 1px solid #555;
+  border-radius: 5px;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.product-card.horizontal-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h2 {
+  color: #BFFF00;
+  margin: 0 0 0.5rem 0;
+}
+
+.product-info p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.product-info a {
+  background-color: #BFFF00;
+  color: #121212;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.supplement-card.horizontal-layout {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem;
+  color: #F1F1F1;
+}
+
+.supplement-card.horizontal-layout img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.supplement-card.horizontal-layout .product-info {
+  flex: 1;
+}
+
+.supplement-card.horizontal-layout img {
+  height: 160px; /* adjust as needed */
+  width: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  flex-shrink: 0;
+  align-items: center;
+
 }
