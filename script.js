@@ -49,7 +49,7 @@ function toggleCategory(header) {
   // Auto-slide every 5 seconds
   setInterval(() => {
     moveSlide(1);
-  }, 5000);
+  }, 7000);
   
   // Show/hide Back to Top button
   window.onscroll = function () {
