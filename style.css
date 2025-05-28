@@ -328,3 +328,7 @@ footer {
     height: 8px;
   }
 }
+.logo {
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
